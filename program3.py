@@ -70,6 +70,6 @@ print("Best Attribute :\n", attribute)
 print("Tree Keys:\n" ,tree[attribute].keys())
 training_data = df_tennis.iloc[1:-4]
 test_data=df_tennis.iloc[-4:]
-train_tree=id3(training_data, 'PlayTennis',attribute_name)
+train_tree=id3(training_data,'PlayTennis',attribute_names)
 test_data['predicted2']=test_data.apply(classify,axis=1,args=(train_tree,'Yes'))
 print('\n\n Accuracy is:' +str(sum(test_data['PlayTennis']==test_data['predicted2'])/(1.0*len(test_data.index))))
