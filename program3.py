@@ -72,4 +72,4 @@ training_data = df_tennis.iloc[1:-4]
 test_data=df_tennis.iloc[-4:]
 train_tree=id3(training_data, 'PlayTennis',attribute_name)
 test_data['predicted2']=test_data.apply(classify,axis=1,args=(train_tree,'Yes'))
-print('\n\n Accuracy is: +str(sumtest_data['PlayTennis']==test_data['predicted2'])
+print('\n\n Accuracy is:' +str(sumtest_data['PlayTennis']==test_data['predicted2'])
